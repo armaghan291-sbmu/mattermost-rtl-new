@@ -32,3 +32,8 @@ jobs:
 
       - name: Build plugin
         run: make dist
+      - name: Upload plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: mattermost-rtl-plugin
+          path: dist/*.tar.gz
